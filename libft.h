@@ -6,11 +6,13 @@
 /*   By: tmarts <tmarts@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 15:39:33 by tmarts            #+#    #+#             */
-/*   Updated: 2022/10/20 21:12:24 by tmarts           ###   ########.fr       */
+/*   Updated: 2022/10/21 01:15:09 by tmarts           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
+#include <stdlib.h>
+
 
 #ifndef _LIBFT_H_
 #define _LIBFT_H_
