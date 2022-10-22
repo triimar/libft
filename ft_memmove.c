@@ -1,32 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmarts <tmarts@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/22 13:10:58 by tmarts            #+#    #+#             */
-/*   Updated: 2022/10/22 21:23:25 by tmarts           ###   ########.fr       */
+/*   Created: 2022/10/22 21:14:44 by tmarts            #+#    #+#             */
+/*   Updated: 2022/10/22 21:18:42 by tmarts           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t	i;
+	char	*to;
+	char	*from;
 
-	i = 0;
-	if (dstsize != 0)
+	to = (char *)dst;
+	from = (char *)src;
+	if (to > from && to - from < (int)len)
 	{
-		while (i < dstsize - 1 && src[i] != 0)
+		while (len != 0)
 		{
-			dst[i] = src[i];
-			i++;
+			*(to + len - 1) = *(from + len - 1);
+			len--;
 		}
-		dst[i] = 0;
 	}
-	while (src[i] != 0)
-		i++;
-	return (i);
+	else
+	{
+		while (len != 0)
+		{
+			*(to++) = *(from++);
+			len--;
+		}
+	}
+	return (dst);
 }
