@@ -6,7 +6,7 @@
 /*   By: tmarts <tmarts@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 14:04:45 by tmarts            #+#    #+#             */
-/*   Updated: 2022/10/22 22:41:29 by tmarts           ###   ########.fr       */
+/*   Updated: 2022/10/24 00:58:59 by tmarts           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,65 +14,37 @@
 // #include <stdio.h>
 #include "libft.h"
 
-// size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
-// {
-// 	size_t	i;
-// 	size_t	j;
-
-// 	i = 0;
-// 	j = 0;
-// 	while (dst[i] != 0)
-// 		i++;
-// 	if (dstsize != 0 && dstsize > i)
-// 	{
-// 		while (src[j] != 0 && dstsize > (i + j + 1))
-// 		{
-// 			dst[i + j] = src[j];
-// 			j++;
-// 		}
-// 		dst[i + j] = 0;
-// 	}
-// 	while (src[j] != 0)
-// 		j++;
-// 	if (dstsize == 0|| dstsize < i)
-// 		return (j + dstsize);
-// 	return (i + j);
-// }
-
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
+	size_t	dstlen;
+	size_t	srclen;
 	size_t	i;
-	size_t	j;
 
+	dstlen = ft_strlen(dst);
+	srclen = ft_strlen(src);
 	i = 0;
-	j = 0;
-	while (dst[i] != 0)
-		i++;
-	while (src[j] != 0)
-		j++;
-	if (dstsize == 0 || dstsize <= i)
-		return (j + dstsize);
-	j = 0;
-	while (src[j] != 0 && dstsize > (i + 1))
+	if (dstsize != 0 && dstlen < dstsize)
 	{
-		dst[i + j] = src[j];
-		j++;
+		while (*src != 0 && i < (dstsize - dstlen - 1))
+		{
+			*(dst + dstlen + i) = *(src + i);
+			i++;
+		}
+		*(dst + dstlen + i) = 0;
+		return (dstlen + srclen);
 	}
-	dst[i + j] = 0;
-	while (src[j] != 0)
-		j++;
-	return (i + j);
+	return (srclen + dstsize);
 }
 
 // int	main(void)
 // {
-// 	const char	src[] = "lorem ipsum dolor sit amet";
-// 	char		dst[15]  = "rrrrrrrrrrrrrr";
-// 	const char	osrc[] = "lorem ipsum dolor sit amet";
-// 	char		odst[15] = "rrrrrrrrrrrrrr";
+// 	const char	src[] = "";
+// 	char		dst[8]  = "a";
+// 	const char	osrc[] = "";
+// 	char		odst[8]  = "a";
 
-// 	printf("ft_strlcat result: %zu\n", ft_strlcat(dst, src, 7));
-// 	printf("strlcat result: %zu\n", strlcat(odst, osrc, 7));
+// 	printf("ft_strlcat result: %zu\n", ft_strlcat(dst, src, 3));
+// 	printf("strlcat result: %zu\n", strlcat(odst, osrc, 3));
 // 	printf("dst after: %s\n", dst);
 // 	printf("odst after: %s\n", odst);
 // 	printf("src after: %s\n", src);
