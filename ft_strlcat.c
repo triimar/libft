@@ -6,7 +6,7 @@
 /*   By: tmarts <tmarts@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 14:04:45 by tmarts            #+#    #+#             */
-/*   Updated: 2022/10/24 14:59:40 by tmarts           ###   ########.fr       */
+/*   Updated: 2022/10/24 15:07:58 by tmarts           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	dstlen;
 	size_t	srclen;
 	size_t	i;
-	
+
 	srclen = ft_strlen(src);
 	if (!dst && dstsize == 0)
 		return (srclen);

@@ -6,7 +6,7 @@
 /*   By: tmarts <tmarts@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 22:36:55 by tmarts            #+#    #+#             */
-/*   Updated: 2022/10/23 23:14:01 by tmarts           ###   ########.fr       */
+/*   Updated: 2022/10/24 18:59:24 by tmarts           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	ft_atoi(const char *str)
 		intvalue = intvalue * 10 + (*str - '0');
 		str++;
 	}
-	return (intvalue * neg_pos);
+	return ((intvalue * neg_pos));
 }
 
 // int	main(void)
