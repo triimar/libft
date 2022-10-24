@@ -6,7 +6,7 @@
 /*   By: tmarts <tmarts@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 21:14:44 by tmarts            #+#    #+#             */
-/*   Updated: 2022/10/22 21:18:42 by tmarts           ###   ########.fr       */
+/*   Updated: 2022/10/24 20:20:50 by tmarts           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 	to = (char *)dst;
 	from = (char *)src;
+	if (len == 0 || dst == src)
+		return (dst);
 	if (to > from && to - from < (int)len)
 	{
 		while (len != 0)

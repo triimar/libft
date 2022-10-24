@@ -6,7 +6,7 @@
 /*   By: tmarts <tmarts@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 19:24:21 by tmarts            #+#    #+#             */
-/*   Updated: 2022/10/23 22:34:08 by tmarts           ###   ########.fr       */
+/*   Updated: 2022/10/24 20:26:56 by tmarts           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	len_left = len;
 	if (*needle == 0)
 		return ((char *)haystack);
+	if (len == 0)
+		return (NULL);
 	if (ft_strlen(haystack) < len)
 		len_left = ft_strlen (haystack);
 	while (len_left > 0)
