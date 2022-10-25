@@ -6,7 +6,7 @@
 /*   By: tmarts <tmarts@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 22:52:28 by tmarts            #+#    #+#             */
-/*   Updated: 2022/10/24 20:44:28 by tmarts           ###   ########.fr       */
+/*   Updated: 2022/10/24 20:48:02 by tmarts           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	string = (char *)s;
 	while (n > 0)
 	{
-		if (*string == (char)c)
+		if (*string == c)
 			return ((void *)string);
 		n--;
 		string++;

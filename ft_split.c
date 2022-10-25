@@ -1,30 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmarts <tmarts@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/22 17:35:33 by tmarts            #+#    #+#             */
-/*   Updated: 2022/10/25 18:43:42 by tmarts           ###   ########.fr       */
+/*   Created: 2022/10/25 18:44:46 by tmarts            #+#    #+#             */
+/*   Updated: 2022/10/25 18:46:45 by tmarts           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+char	**ft_split(char const *s, char c)
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
-{
-	char	*to;
-	char	*from;
-
-	to = (char *)dst;
-	from = (char *)src;
-	while (n != 0)
-	{
-		*to = *from;
-		to++;
-		from++;
-		n--;
-	}
-	return (dst);
-}
