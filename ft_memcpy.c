@@ -6,7 +6,7 @@
 /*   By: tmarts <tmarts@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 17:35:33 by tmarts            #+#    #+#             */
-/*   Updated: 2022/10/25 18:43:42 by tmarts           ###   ########.fr       */
+/*   Updated: 2022/10/27 19:02:35 by tmarts           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	char	*to;
 	char	*from;
 
+	if (dst == 0 && src == 0)
+		return (0);
 	to = (char *)dst;
 	from = (char *)src;
 	while (n != 0)
@@ -28,3 +30,4 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
+
