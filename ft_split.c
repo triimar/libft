@@ -6,7 +6,7 @@
 /*   By: tmarts <tmarts@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 19:42:54 by tmarts            #+#    #+#             */
-/*   Updated: 2022/10/27 18:52:16 by tmarts           ###   ########.fr       */
+/*   Updated: 2022/10/27 19:17:18 by tmarts           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,8 +77,10 @@ char	**ft_split(char const *s, char c)
 			{
 				splits_done--;
 				free (split - splits_done);
-				return (NULL);
 			}
+			free (*split);
+			return (NULL);
+			
 		}
 		splits_done++;
 	}
