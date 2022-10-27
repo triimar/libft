@@ -6,15 +6,16 @@
 /*   By: tmarts <tmarts@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 15:39:33 by tmarts            #+#    #+#             */
-/*   Updated: 2022/10/27 19:02:59 by tmarts           ###   ########.fr       */
+/*   Updated: 2022/10/27 20:49:31 by tmarts           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdlib.h>
+#ifndef LIBFT_H
+# define LIBFT_H
 
-#ifndef _LIBFT_H_
-#define _LIBFT_H_
+# include <stddef.h>
+# include <stdlib.h>
+
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);

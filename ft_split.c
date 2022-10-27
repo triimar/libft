@@ -6,20 +6,17 @@
 /*   By: tmarts <tmarts@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 19:42:54 by tmarts            #+#    #+#             */
-/*   Updated: 2022/10/27 19:17:18 by tmarts           ###   ########.fr       */
+/*   Updated: 2022/10/27 20:52:05 by tmarts           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-// #include <stdio.h>
 
 static int	ft_splitnr(char const *s, char c)
 {
 	int	i;
 	int	splitnr;
 
-	if (!s)
-		return (0);
 	i = 0;
 	splitnr = 0;
 	while (*(s + i) != 0)
@@ -51,6 +48,21 @@ static int	ft_sub_len(char const *start, char c)
 	return (len);
 }
 
+static int	ft_free(char **split, int splits_done)
+{
+	if (!(split))
+	{
+		while (splits_done > 0)
+		{
+			splits_done--;
+			free(split - splits_done);
+		}
+		free (split);
+		return (0);
+	}
+	return (1);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**split;
@@ -60,6 +72,8 @@ char	**ft_split(char const *s, char c)
 	int		length;
 
 	splits_done = 0;
+	if (!s)
+		return (NULL);
 	nr_strings = ft_splitnr(s, c);
 	split = (char **) malloc ((nr_strings + 1) * sizeof (char *));
 	if (!split)
@@ -71,18 +85,8 @@ char	**ft_split(char const *s, char c)
 		start = ft_next_start(start + length, c);
 		length = ft_sub_len(start, c);
 		*(split + splits_done) = ft_substr(start, 0, length);
-		if (!(split + splits_done))
-		{
-			while (splits_done > 0)
-			{
-				splits_done--;
-				free (split - splits_done);
-			}
-			free (*split);
+		if (!ft_free(split, splits_done++))
 			return (NULL);
-			
-		}
-		splits_done++;
 	}
 	*(split + splits_done) = 0;
 	return (split);
