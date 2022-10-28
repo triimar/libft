@@ -6,7 +6,7 @@
 /*   By: tmarts <tmarts@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 16:24:59 by tmarts            #+#    #+#             */
-/*   Updated: 2022/10/28 14:18:10 by tmarts           ###   ########.fr       */
+/*   Updated: 2022/10/28 18:11:06 by tmarts           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,7 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ptr;
 
-	if (count == 0 || size == 0)
-	{
-		count = 1;
-		size = 1;
-	}
-	if (count > SIZE_MAX / size)
+	if (size != 0 && count > SIZE_MAX / size)
 		return (NULL);
 	ptr = malloc(count * size);
 	if (!ptr)
