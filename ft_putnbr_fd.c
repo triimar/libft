@@ -1,36 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmarts <tmarts@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/23 22:36:55 by tmarts            #+#    #+#             */
-/*   Updated: 2022/10/28 14:09:12 by tmarts           ###   ########.fr       */
+/*   Created: 2022/10/28 16:21:43 by tmarts            #+#    #+#             */
+/*   Updated: 2022/10/28 17:46:29 by tmarts           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(const char *str)
-{
-	long long		intvalue;
-	int				neg_pos;
+#include "libft.h"
 
-	intvalue = 0;
-	neg_pos = 1;
-	while ((*str == ' ' || *str == '\f' || *str == '\n'
-			|| *str == '\r' || *str == '\t' || *str == '\v'))
-		str++;
-	if (*str == '-')
+void	ft_putnbr_fd(int n, int fd)
+{
+	char	n_char;
+
+	if (n == -2147483648)
 	{
-		neg_pos = -1;
-		str++;
+		write(fd, "-", 1);
+		write(fd, "2", 1);
+		n = 147483648;
 	}	
-	else if (*str == '+')
-		str++;
-	while (*str >= 48 && *str <= 57)
+	if (n < 0)
 	{
-		intvalue = intvalue * 10 + (*str - '0');
-		str++;
+		write(fd, "-", 1);
+		n = -n;
 	}
-	return ((int)(intvalue * neg_pos));
+	if (n >= 10)
+	{
+		ft_putnbr_fd((n / 10), fd);
+		ft_putnbr_fd((n % 10), fd);
+	}
+	else
+	{
+		n_char = n + '0';
+		write (fd, &n_char, 1);
+	}		
 }
