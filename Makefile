@@ -32,14 +32,12 @@ ft_striteri.c\
 ft_putchar_fd.c\
 ft_putstr_fd.c\
 ft_putendl_fd.c\
-ft_putnbr_fd.c
-
-
-#ft_lstnew.c
-#void ft_lstadd_front.c
-#int ft_lstsize.c
-#t_list *ft_lstlast.c
-#void ft_lstadd_back.c
+ft_putnbr_fd.c\
+ft_lstnew.c\
+ft_lstadd_front.c\
+ft_lstsize.c\
+ft_lstlast.c\
+ft_lstadd_back.c
 #void ft_lstdelone.c
 #void ft_lstclear.c
 #void ft_lstiter.c
