@@ -33,18 +33,19 @@ ft_putchar_fd.c\
 ft_putstr_fd.c\
 ft_putendl_fd.c\
 ft_putnbr_fd.c\
-ft_lstnew.c\
+
+SOURCE_BONUS = ft_lstnew.c\
 ft_lstadd_front.c\
 ft_lstsize.c\
 ft_lstlast.c\
-ft_lstadd_back.c
-#void ft_lstdelone.c
-#void ft_lstclear.c
-#void ft_lstiter.c
-#t_list *ft_lstmap.c
-
+ft_lstadd_back.c\
+ft_lstdelone.c\
+ft_lstclear.c\
+ft_lstiter.c\
+ft_lstmap.c
 
 OBJECT = $(SOURCE:.c=.o)
+OBJECT_BONUS = $(SOURCE_BONUS:.c=.o)
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
@@ -58,9 +59,17 @@ $(NAME): $(OBJECT)
 	$(CC) -c $(CFLAGS) $<
 
 clean:
-	rm -f $(OBJECT)
+	rm -f $(OBJECT)	$(OBJECT_BONUS)
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+bonus: $(OBJECT_BONUS)
+	ar -rcs $(NAME) $?
+
+$(OBJECT_BONUS) : $(SOURCE_BONUS)
+	$(CC) -c $(CFLAGS) $?
+
+.PHONY: clean fclean re
