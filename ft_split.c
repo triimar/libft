@@ -6,7 +6,7 @@
 /*   By: tmarts <tmarts@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 19:42:54 by tmarts            #+#    #+#             */
-/*   Updated: 2022/10/28 18:38:34 by tmarts           ###   ########.fr       */
+/*   Updated: 2022/11/01 16:19:56 by tmarts           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,8 +85,9 @@ char	**ft_split(char const *s, char c)
 		start = ft_next_start(start + length, c);
 		length = ft_sub_len(start, c);
 		*(split + splits_done) = ft_substr(start, 0, length);
-		if (!ft_free(split, splits_done++))
+		if (!ft_free((split + splits_done), splits_done))
 			return (NULL);
+	 	splits_done++;
 	}
 	*(split + splits_done) = 0;
 	return (split);

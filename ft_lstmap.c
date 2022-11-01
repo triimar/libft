@@ -6,7 +6,7 @@
 /*   By: tmarts <tmarts@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 17:56:07 by tmarts            #+#    #+#             */
-/*   Updated: 2022/10/31 19:29:07 by tmarts           ###   ########.fr       */
+/*   Updated: 2022/11/01 16:02:21 by tmarts           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,25 +63,26 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*current;
 	t_list	*new_node;
-	t_list	**new_list;
+	t_list	*new_list;
 
-	
 	current = lst;
 	if (lst == 0)
 		return (NULL);
+	new_list = NULL;
 	while (current != 0)
 	{
-		if (!(ft_lstnew(f(current->content))))
+		new_node = ft_lstnew(f(current->content));
+		if (new_node == 0)
 		{
-			ft_lstdelone(current, del);
+			// ft_lstdelone(current, del);
 			ft_lstdelone(new_node, del);
 		}
-		new_node = ft_lstnew(f(current->content));
-		ft_lstadd_back(new_list, new_node);
+		ft_lstadd_back(&new_list, new_node);
 		current = current->next;
 	}
-	return (*new_list);
+	return (new_list);
 }
+
 // ft_lstmap
 // t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 // Turn in files -
