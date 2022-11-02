@@ -53,10 +53,10 @@ CFLAGS = -Wall -Wextra -Werror
 all: $(NAME)
 
 $(NAME): $(OBJECT)
-	ar -rv $(NAME) $(OBJECT)
+	ar -rcs $(NAME) $(OBJECT)
 
-%.o: %.c 
-	$(CC) -c $(CFLAGS) $<
+$(OBJECT): $(SOURCE) 
+	$(CC) -c $(CFLAGS) $(SOURCE)
 
 clean:
 	rm -f $(OBJECT)	$(OBJECT_BONUS)
@@ -69,7 +69,7 @@ re: fclean all
 bonus: $(OBJECT_BONUS)
 	ar -rcs $(NAME) $?
 
-$(OBJECT_BONUS) : $(SOURCE_BONUS)
+$(OBJECT_BONUS): $(SOURCE_BONUS)
 	$(CC) -c $(CFLAGS) $?
 
 .PHONY: clean fclean re
