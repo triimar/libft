@@ -6,7 +6,7 @@
 /*   By: tmarts <tmarts@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 19:42:54 by tmarts            #+#    #+#             */
-/*   Updated: 2022/11/01 16:19:56 by tmarts           ###   ########.fr       */
+/*   Updated: 2022/11/02 19:06:16 by tmarts           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ static int	ft_splitnr(char const *s, char c)
 	splitnr = 0;
 	while (*(s + i) != 0)
 	{
-		if (*(s + i) != c && (*(s + i + 1) == c || *(s + i + 1) == 0))
+		if (*(s + i) != c && (*(s + i + 1) == 0 || *(s + i + 1) == c))
 			splitnr++;
 		i++;
-	}	
+	}
 	return (splitnr);
 }
 
@@ -48,19 +48,16 @@ static int	ft_sub_len(char const *start, char c)
 	return (len);
 }
 
-static int	ft_free(char **split, int splits_done)
+static char	**ft_free(char **split, int splits_done)
 {
-	if (!(split))
+	splits_done--;
+	while (splits_done >= 0)
 	{
-		while (splits_done > 0)
-		{
-			splits_done--;
-			free(split - splits_done);
-		}
-		free (split);
-		return (0);
+		free(split[splits_done]);
+		splits_done--;
 	}
-	return (1);
+	free (split);
+	return (NULL);
 }
 
 char	**ft_split(char const *s, char c)
@@ -85,9 +82,8 @@ char	**ft_split(char const *s, char c)
 		start = ft_next_start(start + length, c);
 		length = ft_sub_len(start, c);
 		*(split + splits_done) = ft_substr(start, 0, length);
-		if (!ft_free((split + splits_done), splits_done))
-			return (NULL);
-	 	splits_done++;
+		if (*(split + splits_done++) == 0)
+			return (ft_free(split, splits_done));
 	}
 	*(split + splits_done) = 0;
 	return (split);

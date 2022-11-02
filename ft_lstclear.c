@@ -6,7 +6,7 @@
 /*   By: tmarts <tmarts@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 15:57:44 by tmarts            #+#    #+#             */
-/*   Updated: 2022/10/31 17:54:47 by tmarts           ###   ########.fr       */
+/*   Updated: 2022/11/02 19:19:06 by tmarts           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,5 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 			(*lst) = tmp;
 		}
 	}
-	lst = NULL;
 	return ;
 }
