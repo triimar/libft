@@ -6,7 +6,7 @@
 /*   By: tmarts <tmarts@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 17:56:07 by tmarts            #+#    #+#             */
-/*   Updated: 2022/11/02 21:06:11 by tmarts           ###   ########.fr       */
+/*   Updated: 2022/11/03 13:43:39 by tmarts           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new_list;
 	void	*content;
 
+	if (!f || !del)
+		return (NULL);
 	current = lst;
 	if (lst == 0)
 		return (NULL);
