@@ -3,14 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tmarts <tmarts@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tmarts <tmarts@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 17:35:33 by tmarts            #+#    #+#             */
-/*   Updated: 2022/11/03 14:21:20 by tmarts           ###   ########.fr       */
+/*   Updated: 2023/03/03 15:32:38 by tmarts           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+Copies n characters from src to dst without considering possible overlap. 
+Returns dst.
+*/
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {

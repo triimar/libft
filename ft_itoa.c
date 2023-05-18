@@ -3,14 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tmarts <tmarts@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tmarts <tmarts@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 19:51:36 by tmarts            #+#    #+#             */
-/*   Updated: 2022/10/26 18:38:52 by tmarts           ###   ########.fr       */
+/*   Updated: 2023/03/03 15:28:35 by tmarts           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+Allocates (with malloc(3)) and returns a string
+representing the integer received as an argument.
+*/
 
 static int	ft_intlen(int n)
 {

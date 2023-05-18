@@ -3,12 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tmarts <tmarts@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tmarts <tmarts@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 22:36:55 by tmarts            #+#    #+#             */
-/*   Updated: 2022/10/28 18:00:27 by tmarts           ###   ########.fr       */
+/*   Updated: 2023/03/03 15:25:03 by tmarts           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+Returns the converted integral number as an int value. 
+If no valid conversion could be performed, it returns zero.
+*/
 
 int	ft_atoi(const char *str)
 {

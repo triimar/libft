@@ -3,14 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tmarts <tmarts@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tmarts <tmarts@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 16:21:43 by tmarts            #+#    #+#             */
-/*   Updated: 2022/10/28 17:46:29 by tmarts           ###   ########.fr       */
+/*   Updated: 2023/03/03 14:35:47 by tmarts           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+Outputs the integer ’n’ to the given file descriptor.
+*/
 
 void	ft_putnbr_fd(int n, int fd)
 {

@@ -3,14 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tmarts <tmarts@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tmarts <tmarts@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 18:49:16 by tmarts            #+#    #+#             */
-/*   Updated: 2022/10/30 19:16:31 by tmarts           ###   ########.fr       */
+/*   Updated: 2023/03/03 14:43:19 by tmarts           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+Returns the last node of the list.
+*/
 
 t_list	*ft_lstlast(t_list *lst)
 {

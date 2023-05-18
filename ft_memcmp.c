@@ -3,14 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tmarts <tmarts@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tmarts <tmarts@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 22:53:43 by tmarts            #+#    #+#             */
-/*   Updated: 2022/10/23 00:21:13 by tmarts           ###   ########.fr       */
+/*   Updated: 2023/03/03 15:32:11 by tmarts           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+Compares byte string s1 against byte string s2. Both strings are assumed to be 
+n bytes long. 
+Returns zero if the two strings are identical, otherwise returns the difference 
+between the first two differing bytes (treated as unsigned char values).  
+Zero-length strings are always identical. 
+*/
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

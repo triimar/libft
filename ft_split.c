@@ -6,12 +6,19 @@
 /*   By: tmarts <tmarts@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 19:42:54 by tmarts            #+#    #+#             */
-/*   Updated: 2022/11/28 19:44:01 by tmarts           ###   ########.fr       */
+/*   Updated: 2023/05/16 19:04:33 by tmarts           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
+
+/*
+Allocates (with malloc(3)) and returns an array
+of strings obtained by splitting ’s’ using the
+character ’c’ as a delimiter. The array ends
+with a NULL pointer.
+*/
 
 static int	ft_splitnr(char const *s, char c)
 {
@@ -70,7 +77,7 @@ char	**ft_split(char const *s, char c)
 	int		length;
 
 	splits_done = 0;
-	if (!s)
+	if (!s || !ft_splitnr(s, c))
 		return (NULL);
 	nr_strings = ft_splitnr(s, c);
 	split = (char **) malloc ((nr_strings + 1) * sizeof (char *));
