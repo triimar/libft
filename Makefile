@@ -51,22 +51,23 @@ ft_lstmap.c
 OBJECT = $(SOURCE:.c=.o)
 # OBJECT_BONUS = $(SOURCE_BONUS:.c=.o)
 
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 
 $(NAME): $(OBJECT)
-	ar -rcs $(NAME) $(OBJECT)
+	@ar -rcs $(NAME) $(OBJECT)
 
 $(OBJECT): $(SOURCE) 
-	$(CC) -c $(CFLAGS) $(SOURCE)
+	@$(CC) -c $(CFLAGS) $(SOURCE)
 
 clean:
-	rm -f $(OBJECT)	$(OBJECT_BONUS)
+	@rm -f $(OBJECT)	
+# 	$(OBJECT_BONUS)
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re: fclean all
 
