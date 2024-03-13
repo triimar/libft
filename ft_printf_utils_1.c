@@ -6,7 +6,7 @@
 /*   By: tmarts <tmarts@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 16:58:33 by tmarts            #+#    #+#             */
-/*   Updated: 2023/01/09 17:46:53 by tmarts           ###   ########.fr       */
+/*   Updated: 2024/03/13 15:03:40 by tmarts           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	ft_u_intlen(unsigned int u)
 		div = div / 10;
 	}
 	return (length);
-}	
+}
 
 int	ft_hex_len(size_t dec)
 {
@@ -52,10 +52,10 @@ int	ft_hex_len(size_t dec)
 		div = div / 16;
 	}
 	return (length);
-}	
+}
 
 char	*ft_itoa_u(unsigned int u)
-{	
+{
 	char			*n_char;
 	int				length;
 	long long int	div;
@@ -74,7 +74,7 @@ char	*ft_itoa_u(unsigned int u)
 		div = div / 10;
 	}
 	return (n_char);
-}		
+}
 
 char	*ft_itoa_hex(size_t dec, char x_case)
 {
@@ -96,7 +96,7 @@ char	*ft_itoa_hex(size_t dec, char x_case)
 		if (reminder < 10)
 			x_char[length] = reminder + '0';
 		else if (reminder >= 10)
-				x_char[length] = (reminder - 10) + (x_case - 23);
+			x_char[length] = (reminder - 10) + (x_case - 23);
 		length--;
 		div = div / 16;
 	}

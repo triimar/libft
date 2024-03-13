@@ -6,7 +6,7 @@
 /*   By: tmarts <tmarts@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 22:04:20 by tmarts            #+#    #+#             */
-/*   Updated: 2023/01/09 17:47:22 by tmarts           ###   ########.fr       */
+/*   Updated: 2024/03/13 15:05:48 by tmarts           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ char	*reader(int fd, char *line, char **left)
 		*left = ft_strndup(buf + len, read_return - len + 1);
 		if (!*left)
 			return (free_reader(buf, line));
-	}	
+	}
 	return (free(buf), line);
 }
 

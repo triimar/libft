@@ -6,7 +6,7 @@
 /*   By: tmarts <tmarts@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 22:04:27 by tmarts            #+#    #+#             */
-/*   Updated: 2023/02/27 14:43:58 by tmarts           ###   ########.fr       */
+/*   Updated: 2024/03/13 15:05:57 by tmarts           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ char	*ft_strljoin(char *s1, char *s2, int len_s2)
 	{
 		string = ft_strndup(s2, len_s2);
 		return (string);
-	}	
+	}
 	s1_len = ft_strlen(s1);
 	string = malloc(s1_len + len_s2 + 1 * sizeof(char));
 	if (!string)

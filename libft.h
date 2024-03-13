@@ -6,7 +6,7 @@
 /*   By: tmarts <tmarts@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 15:39:33 by tmarts            #+#    #+#             */
-/*   Updated: 2023/01/20 16:45:19 by tmarts           ###   ########.fr       */
+/*   Updated: 2024/03/13 16:46:11 by tmarts           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@
 # include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include "ft_printf.h"
-# include "get_next_line_bonus.h"
 
 typedef struct s_list
 {

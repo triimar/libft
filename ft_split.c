@@ -6,12 +6,11 @@
 /*   By: tmarts <tmarts@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 19:42:54 by tmarts            #+#    #+#             */
-/*   Updated: 2023/05/16 19:04:33 by tmarts           ###   ########.fr       */
+/*   Updated: 2024/03/13 16:29:48 by tmarts           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 /*
 Allocates (with malloc(3)) and returns an array
@@ -37,7 +36,7 @@ static int	ft_splitnr(char const *s, char c)
 }
 
 static char	*ft_next_start(char const *start, char c)
-{	
+{
 	char	*next_start;
 
 	while (*start == c && *start != 0)
@@ -76,8 +75,7 @@ char	**ft_split(char const *s, char c)
 	char	*start;
 	int		length;
 
-	splits_done = 0;
-	if (!s || !ft_splitnr(s, c))
+	if (!s)
 		return (NULL);
 	nr_strings = ft_splitnr(s, c);
 	split = (char **) malloc ((nr_strings + 1) * sizeof (char *));
@@ -85,6 +83,7 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	start = (char *)s;
 	length = 0;
+	splits_done = 0;
 	while (splits_done < nr_strings)
 	{
 		start = ft_next_start(start + length, c);

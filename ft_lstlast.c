@@ -6,7 +6,7 @@
 /*   By: tmarts <tmarts@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 18:49:16 by tmarts            #+#    #+#             */
-/*   Updated: 2023/03/03 14:43:19 by tmarts           ###   ########.fr       */
+/*   Updated: 2024/03/13 15:02:22 by tmarts           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,6 @@ t_list	*ft_lstlast(t_list *lst)
 		if (current->next == 0)
 			return (current);
 		current = current->next;
-	}	
+	}
 	return (0);
 }

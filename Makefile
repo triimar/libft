@@ -46,10 +46,9 @@ ft_lstadd_back.c\
 ft_lstdelone.c\
 ft_lstclear.c\
 ft_lstiter.c\
-ft_lstmap.c
+ft_lstmap.c\
 
 OBJECT = $(SOURCE:.c=.o)
-# OBJECT_BONUS = $(SOURCE_BONUS:.c=.o)
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
@@ -64,17 +63,10 @@ $(OBJECT): $(SOURCE)
 
 clean:
 	@rm -f $(OBJECT)	
-# 	$(OBJECT_BONUS)
 
 fclean: clean
 	@rm -f $(NAME)
 
 re: fclean all
-
-# bonus: $(OBJECT_BONUS)
-# ar -rcs $(NAME) $?
-
-# $(OBJECT_BONUS): $(SOURCE_BONUS)
-# $(CC) -c $(CFLAGS) $?
 
 .PHONY: clean fclean re

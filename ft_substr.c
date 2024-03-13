@@ -6,7 +6,7 @@
 /*   By: tmarts <tmarts@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 16:12:44 by tmarts            #+#    #+#             */
-/*   Updated: 2023/03/03 14:21:30 by tmarts           ###   ########.fr       */
+/*   Updated: 2024/03/13 15:05:35 by tmarts           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		i++;
 	}
 	if (i == size)
-			sub[i] = '\0';
+		sub[i] = '\0';
 	return (sub);
 }

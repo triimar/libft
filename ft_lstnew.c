@@ -6,11 +6,11 @@
 /*   By: tmarts <tmarts@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 21:54:48 by tmarts            #+#    #+#             */
-/*   Updated: 2023/03/03 14:39:57 by tmarts           ###   ########.fr       */
+/*   Updated: 2024/03/13 15:03:00 by tmarts           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include  "libft.h"
+#include "libft.h"
 
 /*
 Allocates (with malloc(3)) and returns a new node.
