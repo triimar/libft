@@ -1,7 +1,17 @@
-LIBFT is a project about coding a C library.
+## **LIBFT - a project about coding a C library**
 
-It contains versions of many standard C functions as well as well as a set of functions that are either not in the libc,
-or that are part of it but in a different form.
-The Libft in it's current version has been extended with 
--ft_printf - a simplified version of printf, and 
--get_next_line() - a similar function to readline()
+Libft contains recoded versions of many functions of the C standard library 
+as well as a set of useful functions that are either not in the libc,
+or that are part of it in a different form.
+
+The Libft in it's current version has been extended with\
+**ft_printf()** - a simplified version of printf, and **get_next_line()** - a similar function to readline().
+
+### Learning objectives:
+- Understanding the implementation (and limitations) of standard C functions
+- Getting into practice of reading documentation
+- Extensive use of pointers and char arrays
+- Recognizing and anticipating edge cases
+- Imperative programming
+- Rigor
+- Unix
