@@ -1,5 +1,9 @@
 NAME = libft.a
-SOURCE = ft_isalpha.c\
+
+SRC_DIR_PRINTF = ft_printf
+SRC_DIR_GNL = get_next_line
+
+SRCS = ft_isalpha.c\
 ft_isdigit.c\
 ft_isalnum.c\
 ft_isascii.c\
@@ -41,14 +45,18 @@ ft_lstadd_back.c\
 ft_lstdelone.c\
 ft_lstclear.c\
 ft_lstiter.c\
-ft_lstmap.c\
-get_next_line_bonus.c\
-get_next_line_utils_bonus.c\
+ft_lstmap.c
+
+SRCS_PRINTF = $(addprefix $(SRC_DIR_PRINTF)/, \
 ft_printf.c\
 ft_printf_utils_1.c\
-ft_printf_utils_2.c
+ft_printf_utils_2.c)
 
-OBJECT = $(SOURCE:.c=.o)
+SRCS_GNL = $(addprefix $(SRC_DIR_GNL)/, \
+get_next_line_bonus.c \
+get_next_line_utils_bonus.c)
+
+OBJECT = $(SRCS:.c=.o) $(SRCS_PRINTF:.c=.o) $(SRCS_GNL:.c=.o)
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
@@ -58,8 +66,8 @@ all: $(NAME)
 $(NAME): $(OBJECT)
 	@ar -rcs $(NAME) $(OBJECT)
 
-$(OBJECT): $(SOURCE) 
-	@$(CC) -c $(CFLAGS) $(SOURCE)
+%.o: %.c
+	$(CC) $(CFLAGS)	-c $< -o $@
 
 clean:
 	@rm -f $(OBJECT)	

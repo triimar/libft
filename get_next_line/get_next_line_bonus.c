@@ -6,12 +6,11 @@
 /*   By: tmarts <tmarts@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 22:04:20 by tmarts            #+#    #+#             */
-/*   Updated: 2024/03/13 15:05:48 by tmarts           ###   ########.fr       */
+/*   Updated: 2024/03/13 17:03:15 by tmarts           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line_bonus.h"
-#include "libft.h"
 
 char	*read_initiate(int fd)
 {

@@ -6,12 +6,11 @@
 /*   By: tmarts <tmarts@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/26 16:58:33 by tmarts            #+#    #+#             */
-/*   Updated: 2024/03/13 15:03:40 by tmarts           ###   ########.fr       */
+/*   Updated: 2024/03/13 17:03:44 by tmarts           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "libft.h"
 
 int	ft_putchar_int(int c)
 {

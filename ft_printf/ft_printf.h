@@ -6,7 +6,7 @@
 /*   By: tmarts <tmarts@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 18:23:03 by tmarts            #+#    #+#             */
-/*   Updated: 2023/01/09 17:29:30 by tmarts           ###   ########.fr       */
+/*   Updated: 2024/03/13 17:03:57 by tmarts           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <stdarg.h>
 # include <unistd.h>
 # include <stdlib.h>
-# include "libft.h"
+# include "../libft.h"
 
 int		ft_printf(const char *msg, ...);
 int		ft_conversions(const char *f_spec, va_list args);

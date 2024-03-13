@@ -6,12 +6,11 @@
 /*   By: tmarts <tmarts@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 18:22:02 by tmarts            #+#    #+#             */
-/*   Updated: 2023/03/03 15:51:25 by tmarts           ###   ########.fr       */
+/*   Updated: 2024/03/13 17:03:32 by tmarts           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "libft.h"
 
 /*
 int	ft_conversions(const char *f_spec, va_list args)
